@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 
-<body style="margin-top:2em;">
+<body>
 <a name="top"></a>
 <div class="container">
 
@@ -22,27 +22,26 @@
         </div>
     </div>
 
-    <nav class="navbar" style="margin-bottom:2em;">
-        <div class="container">
-            <ul class="navbar-list">
-                <li class="navbar-item"><a class="navbar-link" onclick="toggle('about')">About</a></li>
-                <li class="navbar-item"><a class="navbar-link" onclick="toggle('work')">Work</a></li>
-                <li class="navbar-item"><a class="navbar-link" onclick="toggle('contact')">Contact</a></li>
-            </ul>
-        </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about" id="about-a" onclick="toggle('about')">About</a></li>
+            <li><a href="#work" id="work-a" onclick="toggle('work')">Work</a></li>
+            <li><a href="#contact" id="contact-a" onclick="toggle('contact')">Contact</a></li>
+        </ul>
     </nav>
 
     <section id="about">
         <div class="row">
-            <div class="twelve columns">
-                <h3>About</h3>
+            <div class="three columns">
+                <!--img src="assets/img/profile.png" style="width:100%"--><p></p>
             </div>
-        </div>
-        <div class="row">
-            <div class="twelve columns">
+            <div class="six columns" style="text-align: justify;">
                 <p>I’m a writer for CNET/CBS Interactive. My work ranges from feature articles to news stories and product reviews. I’m passionate about the outdoors, conservation, and travel. My favorite stories examine the natural world -- and the inspiring people fighting to make it a better place.</p>
                 <p>You’ll also find me in videos, and, occasionally, behind the camera taking still shots.</p>
                 <p>I have a master’s degree from the University of Louisville and a bachelor’s degree from Connecticut College, both in international relations. I live in Kentucky with my husband and our two rescue dogs.</p>
+            </div>
+            <div class="three columns">
+                <p></p>
             </div>
         </div>
     </section>
@@ -50,31 +49,67 @@
     <section id="work">
         <div class="row">
             <div class="twelve columns">
-                <h3>Work</h3>
+                <h5>Selected Articles</h5>
             </div>
         </div>
         <div class="row">
             <div class="six columns">
-                <h5>Selected Articles</h5>
-                <ul style="list-style-type: none;">
-                    <li><a href="https://www.cnet.com/news/harnessing-the-sun-in-coal-country/">Harnessing the sun in coal country</a></li>
-                    <li><a href="https://www.cnet.com/features/the-deep-dark-quest-to-save-the-pupfish/">The deep, dark quest to save one of the world's rarest fish</a></li>
-                    <li><a href="https://www.cnet.com/news/tracking-wolves-through-6-million-acres-of-denali-wilderness/">Wolves matter. Technology shows us why</a></li>
-                    <li><a href="https://www.cnet.com/news/can-tech-save-a-dying-bat-species/">Can tech save a dying bat species?</a></li>
-                </ul>
+                <a href="https://www.cnet.com/news/harnessing-the-sun-in-coal-country/" class="plain-link">
+                    <div class="twelve columns article" style="background-image:url('assets/img/pikeville-solar-coal-print-exports-7.jpg');">
+                        Harnessing the sun in coal country
+                    </div>
+                </a>
+            </div>
+            <div class="six columns">
+                <a href="https://www.cnet.com/features/the-deep-dark-quest-to-save-the-pupfish/" class="plain-link">
+                    <div class="twelve columns article" style="background-image:url('assets/img/pikeville-solar-coal-print-exports-7.jpg');">
+                        The deep, dark quest to save one of the world's rarest fish
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row" style="margin-top:1em;">
+            <div class="six columns">
+                <a href="https://www.cnet.com/news/tracking-wolves-through-6-million-acres-of-denali-wilderness/" class="plain-link">
+                    <div class="twelve columns article" style="background-image:url('assets/img/pikeville-solar-coal-print-exports-7.jpg');">
+                        Wolves matter. Technology shows us why
+                    </div>
+                </a>
+            </div>
+            <div class="six columns">
+                <a href="https://www.cnet.com/news/can-tech-save-a-dying-bat-species/" class="plain-link">
+                    <div class="twelve columns article" style="background-image:url('assets/img/pikeville-solar-coal-print-exports-7.jpg');">
+                        Can tech save a dying bat species?
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="twelve columns">
+                <h4>Selected Videos</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">
+                <video controls style="width:100%">
+                    <!--iframe src="https://www.cnet.com/videos/share/how-tech-is-keeping-one-critically-endangered-desert-fish-alive/" width="480" height="270" frameBorder="0" seamless="seamless" allowFullScreen></iframe-->
+                    <source src="assets/video/Devils_Hole_8_13_1470943_1928.mp4" type="video/mp4">
+                </video>
             </div>
 
             <div class="six columns">
-                <h5>Selected Videos</h5>
-                <ul style="list-style-type: none;">
-                    <li><a href="https://www.cnet.com/videos/how-tech-is-keeping-one-critically-endangered-desert-fish-alive/">[Title: How tech is keeping one critically endangered desert fish alive?]</a></li>
-                    <li><a href="https://www.cnet.com/videos/tracking-the-hidden-lives-of-denalis-wolves/">[Title: Tracking the hidden lives of Denali's wolves?]</a></li>
-                </ul>
+                <video controls style="width:100%">
+                    <source src="assets/video/Road_Trip_Wolves_1535871_1928.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
 
-                <h5>Selected Photos</h5>
-                <ul style="list-style-type: none;">
-                    <li><a href="https://www.cnet.com/pictures/scientists-use-gps-cameras-and-radio-transmitters-to-monitor-denalis-wolves/">[Title: Denali Photos?]</a></li>
-                </ul>
+        <div class="row">
+            <div class="twelve columns">
+                <h4>Selected Photos</h4>
+                <a href="https://www.cnet.com/pictures/scientists-use-gps-cameras-and-radio-transmitters-to-monitor-denalis-wolves/"><img src="assets/img/slideshow.png" style="width:100%;"></a>
             </div>
         </div>
     </section>
@@ -129,6 +164,8 @@ function toggle(sectionID) {
     } else {
         x.style.display = "none";
     }
+
+    bold(sectionID+"-a");
 }
 
 function hideAll() {
@@ -138,6 +175,25 @@ function hideAll() {
         console.log(sections[i]);
         sections[i].style.display = "none";
     }
+
+    unbold("about-a");
+    unbold("work-a");
+    unbold("contact-a");
+}
+
+function bold (id) {
+
+    unbold("about-a");
+    unbold("work-a");
+    unbold("contact-a");
+
+    var x = document.getElementById(id);
+    x.style.fontWeight = "bold";
+}
+
+function unbold (id) {
+    var x = document.getElementById(id);
+    x.style.fontWeight = "normal";
 }
 
 var hash = window.location.hash.substr(1);
