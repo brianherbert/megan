@@ -1,12 +1,46 @@
 body {
-  margin-top:2em;
+  margin-top:0em;
 }
 
 .container {
-  max-width: 1200px; }
+  max-width: 1200px;
+}
+
 header {
   margin-top: 6rem;
-  text-align: center; }
+  text-align: center;
+  position:absolute;
+  top:0;
+  width:100%;
+  z-index:2;
+}
+/*
+footer {
+  display:flex;
+  margin: 5em 0;
+}
+
+footer p {
+  text-align:center;
+  width:100%;
+  color:#f2f2f2;
+}
+*/
+
+a:hover {
+  color:#581746;
+}
+
+section {
+  display:none;
+  /*margin-top:6rem;*/
+  padding-top:22rem;
+  position:absolute;
+  top:0;
+  width:100%;
+  z-index:1;
+  padding-bottom:100px;
+}
 
 
 
@@ -17,7 +51,6 @@ header {
     border-bottom: 1px solid #eee;
     height:3em;
     padding-top:1em;
-    background-color:#fff;
 }
 .navbar ul {
     display:inline-block;
@@ -58,14 +91,6 @@ header {
   cursor: pointer;
 }
 
-a:hover {
-  color:#581746;
-}
-
-section {
-  display:none;
-  margin-top:6rem;
-}
 
 .article {
   min-height:100px;
@@ -116,42 +141,3 @@ td:first-child {
   opacity:.4;
 }
 
-
-
-/* Larger than mobile */
-@media (min-width: 400px) {
-  body{
-    background-color:#33cc33;
-  }
-}
-
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {
-  body{
-    background-color:#66ff66;
-  }
-
-}
-
-/* Larger than tablet */
-/* little tight */
-@media (min-width: 750px) {
-  body{
-    background-color:#99ff99;
-  }
-
-}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {
-  body{
-    background-color:#ccffcc;
-  }
-}
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {
-  body{
-    background-color:#fff;
-  }
-}
