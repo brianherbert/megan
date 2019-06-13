@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/skeleton.css">
     <link rel="stylesheet" href="assets/css/custom.css">
+
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/responsiveslides.min.js"></script>
 </head>
 
 <body>
@@ -14,7 +17,7 @@
 <div class="container">
     <header>
 
-        <h1 class="title"><a onclick="hideAll()" class="plain-link">Megan Wollerton</a></h1>
+        <h1 class="title" style="font-weight:900;"><a onclick="hideAll()" class="plain-link">Megan Wollerton</a></h1>
 
         <div class="row">
             <div class="twelve columns" id="hero">
@@ -58,7 +61,10 @@
                 <h4>Selected Articles</h4>
             </div>
         </div>
-        <div class="row">
+
+        <div id="article_html"></div>
+
+        <!--div class="row article-row">
 
             <div class="six columns article-image" style="background-image:url('assets/img/articles/pikeville.jpg');">
                 <a href="https://www.cnet.com/news/harnessing-the-sun-in-coal-country/" class="plain-link">
@@ -78,7 +84,7 @@
             </div>
 
         </div>
-        <div class="row" style="margin-top:1em;">
+        <div class="row article-row">
 
             <div class="six columns article-image" style="background-image:url('assets/img/articles/wolf.jpg');">
                 <a href="https://www.cnet.com/news/tracking-wolves-through-6-million-acres-of-denali-wilderness/" class="plain-link">
@@ -97,7 +103,7 @@
                 </a>
             </div>
 
-        </div>
+        </div-->
 
 
         <div class="row work-block">
@@ -123,7 +129,12 @@
         <div class="row work-block">
             <div class="twelve columns">
                 <h4>Selected Photos</h4>
-                <a href="https://www.cnet.com/pictures/scientists-use-gps-cameras-and-radio-transmitters-to-monitor-denalis-wolves/"><img src="assets/img/slideshow.png" style="width:100%;"></a>
+
+                <div class="rslides_container">
+                    <ul class="rslides" id="slides"></ul>
+                </div>
+
+                <!--a href="https://www.cnet.com/pictures/scientists-use-gps-cameras-and-radio-transmitters-to-monitor-denalis-wolves/"><img src="assets/img/slideshow.png" style="width:100%;"></a-->
             </div>
         </div>
 
@@ -184,7 +195,6 @@ function hideAll() {
     document.getElementById('hero').style.display = "block";
     var sections = document.getElementsByTagName("section");
     for(var i = 0; i < sections.length; i++){
-        console.log(sections[i]);
         sections[i].style.display = "none";
     }
 
@@ -216,6 +226,101 @@ if (hash.includes("?")) {
 if (hash.length > 0) {
     toggle(hash);
 }
+
+
+var article_template = ''+
+            '<div class="six columns article-image" style="background-image:url(\'%IMAGE%\');">'+
+                '<a href="%URL%" class="plain-link">'+
+                    '<div class="four columns">&nbsp;</div>'+
+                    '<div class="eight columns article">'+
+                        '%TITLE%'+
+                    '</div>'+
+                '</a>'+
+            '</div>';
+
+
+$.getJSON( "content.json", function( data ) {
+
+    /* ---------------
+    ---- ARTICLES ----
+    --------------- */
+
+    var first = true;
+    var all_articles_html = '';
+
+    $.each( data['articles'], function( key, article ) {
+
+        article_html = article_template;
+
+        if(first == true) {
+            article_html = '<div class="row article-row">' + article_html;
+        }
+
+        article_html = article_html.replace("%IMAGE%", article['image']);
+        article_html = article_html.replace("%URL%", article['url']);
+        article_html = article_html.replace("%TITLE%", article['title']);
+
+        /* if it's the second article, close this out the row */
+        if(first == false) {
+            article_html = article_html + '</div>';
+        }
+
+        if(first == true) {
+            // If this was the first, then the next one will be the second
+            first = false;
+        }else{
+            // Otherwise the next one will be the first
+            first = true;
+        }
+
+        all_articles_html = all_articles_html + article_html;
+
+    });
+
+    $('#article_html').append(all_articles_html);
+
+
+    /* ---------------
+    --- SLIDESHOW ---
+    --------------- */
+
+    $.each( data['slideshow'], function( key, image ) {
+
+        console.log(image);
+
+        $('#slides').append('<li><img src="'+image+'"></li>');
+
+    });
+/*
+    $(function() {
+        $("#slides").responsiveSlides({
+              auto: false,             // Boolean: Animate automatically, true or false
+              timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+              pager: true,           // Boolean: Show pager, true or false
+              nav: true,             // Boolean: Show navigation, true or false
+              prevText: "&lt;",   // String: Text for the "previous" button
+              nextText: "&gt;",       // String: Text for the "next" button
+              maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
+              navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
+              manualControls: "",     // Selector: Declare custom pager navigation
+              namespace: "slides",   // String: Change the default namespace used
+              before: function(){},   // Function: Before callback
+              after: function(){}     // Function: After callback
+            });
+    });
+*/
+    $(function() {
+        $("#slides").responsiveSlides({
+        auto: false,
+        pager: false,
+        nav: true,
+        speed: 0,
+        maxwidth: 980,
+        namespace: "large-btns"
+        });
+    });
+
+});
 
 
 </script>

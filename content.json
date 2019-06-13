@@ -1,0 +1,39 @@
+{
+
+    "articles": [
+
+    {
+        "title": "Harnessing the sun in coal country",
+        "url": "https://www.cnet.com/news/harnessing-the-sun-in-coal-country/",
+        "image": "assets/img/articles/pikeville.jpg"
+    },
+
+    {
+        "title": "The deep, dark quest to save one of the world's rarest fish",
+        "url": "https://www.cnet.com/features/the-deep-dark-quest-to-save-the-pupfish/",
+        "image": "assets/img/articles/fish.jpg"
+    },
+
+    {
+        "title": "Wolves matter. Technology shows us why",
+        "url": "https://www.cnet.com/news/tracking-wolves-through-6-million-acres-of-denali-wilderness/",
+        "image": "assets/img/articles/wolf.jpg"
+    },
+
+    {
+        "title": "Can tech save a dying bat species?",
+        "url": "https://www.cnet.com/news/can-tech-save-a-dying-bat-species/",
+        "image": "assets/img/articles/bat.jpg"
+    }
+
+    ],
+
+    "slideshow": [
+        "assets/img/slideshow/denali-wolf-megan-5.jpg",
+        "assets/img/slideshow/denali-wolf-megan-8.jpg",
+        "assets/img/slideshow/denali-wolf-megan-35.jpg",
+        "assets/img/slideshow/denali-wolf-megan-37.jpg"
+    ]
+
+
+}
