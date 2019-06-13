@@ -68,15 +68,17 @@ section {
 }
 
 .article {
-  height:100px;
-  background-size: 100%;
+  min-height:100px;
   font-weight:bold;
   /*color:#fff;*/
-  font-size:2rem;
+  font-size:1.8rem;
+  background: rgba(255,255,255,0.9);
+  padding:1em;
 }
 
 .article-image {
   min-height:100px;
+  height:100%;
   background-size:cover;
   background-position:center;
 }
@@ -105,4 +107,51 @@ td {
 
 td:first-child {
   text-align:right;
+}
+
+.photo-credit {
+  margin-top:0;
+  font-size:.8em;
+  float:right;
+  opacity:.4;
+}
+
+
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+  body{
+    background-color:#33cc33;
+  }
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  body{
+    background-color:#66ff66;
+  }
+
+}
+
+/* Larger than tablet */
+/* little tight */
+@media (min-width: 750px) {
+  body{
+    background-color:#99ff99;
+  }
+
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  body{
+    background-color:#ccffcc;
+  }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+  body{
+    background-color:#fff;
+  }
 }
