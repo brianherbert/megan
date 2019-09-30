@@ -4,7 +4,14 @@
         
     {
         "title": "Harnessing the sun in coal country",
-        "url": "https://www.cnet.com/news/harnessing-the-sun-in-coal-country/"
+        "url": "https://www.cnet.com/news/harnessing-the-sun-in-coal-country/".
+        "image": "assets/img/articles/pikeville.jpg"
+    },
+    
+    {
+        "title": "Cristina Mittermeier is fighting climate change, one photograph at a time",
+        "url": "https://www.cnet.com/features/cristina-mittermeier-is-fighting-climate-change-one-photograph-at-a-time/",
+        "image": "assets/img/articles/fish.jpg"
     },
 
     {
