@@ -13,6 +13,11 @@
         "image": "assets/img/articles/pikeville.jpg"
     },
     {
+        "title": "Rowing against the current",
+        "url": "https://www.cnet.com/news/rowing-against-the-current/",
+        "image": "assets/img/articles/tori.jpg"
+    },
+    {
         "title": "The deep, dark quest to save one of the world's rarest fish",
         "url": "https://www.cnet.com/features/the-deep-dark-quest-to-save-the-pupfish/",
         "image": "assets/img/articles/fish.jpg"
@@ -28,12 +33,8 @@
         "title": "Can tech save a dying bat species?",
         "url": "https://www.cnet.com/news/can-tech-save-a-dying-bat-species/",
         "image": "assets/img/articles/bat.jpg"
-    },
-    {
-        "title": "Rowing against the current",
-        "url": "https://www.cnet.com/news/rowing-against-the-current/",
-        "image": "assets/img/articles/tori.jpg"
     }
+  
 
     ],
 
