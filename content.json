@@ -2,6 +2,21 @@
 
     "articles": [
         
+                 {
+        "title": "So your dog ate a cicada: What to know about Brood X and pet safety",
+        "url": "https://www.cnet.com/home/yard-and-outdoors/your-dog-or-cat-ate-a-cicada-what-to-know-about-brood-x-cicadas-and-pet-safety/"
+    },
+        
+              {
+        "title": "Carbon neutral vs. carbon negative: What's the difference?",
+        "url": "https://www.cnet.com/home/energy-and-utilities/carbon-neutral-vs-carbon-negative-whats-the-difference/"
+    },
+        
+            {
+        "title": "The United States rejoins the Paris climate accord. Here's what that means",
+        "url": "https://www.cnet.com/home/energy-and-utilities/the-united-states-rejoins-the-paris-climate-accord-heres-what-that-means/"
+    },
+        
         {
         "title": "I did yoga every day for a year",
         "url": "https://www.cnet.com/health/i-did-yoga-every-day-for-a-year/"
