@@ -2,7 +2,16 @@
 
     "articles": [
         
-                    {
+                                  {
+        "title": "How next-gen satellites are transforming our view of climate change",
+        "url": "https://www.cnet.com/features/how-next-gen-satellites-are-transforming-our-view-of-climate-change/"
+    }, 
+                                      {
+        "title": "The mysterious case of America's dying songbirds",
+        "url": "https://www.cnet.com/features/the-mysterious-case-of-americas-dying-songbirds/"
+    }, 
+        
+        {
         "title": "Pet disaster prep: Take these steps to keep your pets safe during a wildfire evacuation",
         "url": "https://www.cnet.com/home/energy-and-utilities/pet-disaster-prep-take-these-steps-to-keep-your-pets-safe-during-a-wildfire-evacuation/"
     }, 
