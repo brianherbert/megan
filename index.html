@@ -196,8 +196,7 @@ function toggle(sectionID) {
     bold(sectionID+"-a");
 
     if(history.pushState) {
-        console.log('push state');
-        history.pushState(null, null, sectionID);
+        history.pushState(null, null, "#"+sectionID);
     } else {
         location.hash = sectionID;
     }
